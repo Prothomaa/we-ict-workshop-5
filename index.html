@@ -35,6 +35,8 @@
             color: var(--text-primary);
             overflow-x: hidden;
             line-height: 1.6;
+            margin: 0;  /* Add this if missing */
+            padding: 0; /* Add this if missing */
         }
 
         /* Animated Background */
@@ -955,8 +957,15 @@
         footer {
             background: var(--bg-secondary);
             border-top: 1px solid var(--border);
-            padding: 3rem 2rem 2rem;
+            padding: 3rem 2rem 0;
             text-align: center;
+            width: 100vw;           /* Added */
+            margin: 0;              /* Added */
+            position: relative;     /* Added */
+            left: 50%;              /* Added */
+            right: 50%;             /* Added */
+            margin-left: -50vw;     /* Added */
+            margin-right: -50vw;    /* Added */
         }
 
         .footer-content {
@@ -993,7 +1002,9 @@
         }
 
         .copyright {
-            padding-top: 2rem;
+            /*padding-top: 2rem;*/
+            padding: 2rem 0 0;  /* Changed to remove bottom padding */
+            margin: 0;          /* Added */
             border-top: 1px solid var(--border);
             color: var(--text-secondary);
         }
